@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/layout_padding"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editResourceName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:ems="10"
+        android:hint="@string/water_resource_name"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editLocation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:ems="10"
+        android:hint="@string/location_title"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editResourceName" />
+
+    <EditText
+        android:id="@+id/editType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:ems="10"
+        android:hint="@string/type_title"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editLocation" />
+
+    <EditText
+        android:id="@+id/editCapacity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:ems="10"
+        android:hint="@string/capacity_title"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editType" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCapacity"
+        android:layout_marginTop="20dp"
+        android:onClick="addButtonOnClick"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton"
+        android:layout_marginTop="10dp">
+        <TableLayout
+            android:id="@+id/tableWaterResources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,2,3"
+            android:shrinkColumns="1"/>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

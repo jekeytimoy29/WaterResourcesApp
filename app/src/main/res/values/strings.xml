@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WaterResourcesApp</string>
+    <string name="add_title">Add</string>
+    <string name="type_title">Type</string>
+    <string name="location_title">Location</string>
+    <string name="water_resource_name">Water Resource Name</string>
+    <string name="capacity_title">Capacity</string>
+    <string name="error_text_toast">Error: \'%1$s\' field is required.</string>
+    <string name="resource_added_successfully">Water Resource: \'%1$s\' is successfully added.</string>
+    <string name="error_already_exists">Water Resource: \'%1$s\' already exists.</string>
+</resources>
